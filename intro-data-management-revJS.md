@@ -47,8 +47,6 @@ and more -  this calls for increased attention to data management and stewardshi
 
  ![Magazines](images/data-deluge.jpg) 
  
- 
- 
 ## A World of Data
 
 ![data around us](images/data-around-us.png)
