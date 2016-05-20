@@ -4,7 +4,6 @@ before_script:
 - chmod +x ./bin/build
 before_install:
 - mkdir -p ~/.ssh
-- sudo apt-get update
 - sudo apt-get install pandoc
 
 script: ./bin/build
