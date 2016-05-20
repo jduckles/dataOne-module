@@ -1,3 +1,15 @@
 #!/bin/sh
 
+rm -rf site 
+mkdir site 
+
+git config --global user.email "nobody@nobody.org"
+git config --global user.name "Travis CI"
+
 make html
+
+cd site
+git init 
+git add .
+git commit -m 'Deploy to gh-pages'
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GIT_REPO}.git master:gh-pages > /dev/null 2>&1
