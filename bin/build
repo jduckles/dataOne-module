@@ -13,4 +13,4 @@ cd site
 git init
 git add .
 git commit -m 'Deploy to gh-pages'
-git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GIT_REPO}.git" master:gh-pages
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:gh-pages
