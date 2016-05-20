@@ -3,20 +3,15 @@ sudo: required
 before_script:
 - chmod +x ./bin/cibuild
 before_install:
-  - mkdir -p ~/.ssh
-  - openssl aes-256-cbc -K $encrypted_957066c6439f_key -iv $encrypted_957066c6439f_iv -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-  - sudo apt-get update
-  - sudo apt-get upgrade
-  - sudo apt-get install pandoc 
+- mkdir -p ~/.ssh
+- sudo apt-get update
+- sudo apt-get upgrade
+- sudo apt-get install pandoc
 
-# Assume bundler is being used, therefore
-# # the `install` step will run `bundle install` by default.
-script: ./bin/build
-branches:
-  only:
-  - gh-pages
-  - /pages-(.*)/
-  - /blog-(.*)/
+script: "./bin/build"
+
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO=jduckles/dataOne-module
+  - secure: KG//Grn0MWdTE8MFChQo+f0xP+10cY2nAtXYDY245ezJzCPjZ0xf3tUSj8wz0GD0vEJe53xsCLo0/AZqrBFg0IF5aHdyhLuI+NUzJ47tBxxkRFbOuJT8Br3kIaj4vzSVVssQzVirSMHNcZEFdGlVJruj+UFMNhhkiJWDAXp5n65JA8KMEgE9KYEJYhS5qrW5mmurLz95iufoJgokvozLemcnSOiGhMeuTH5QxPO9ui5w8oG5seAIOovn2vMVvxyYCMxUfPG//2KvWQyvqpi14S5qYWI0b8kyS4lTLnGh/HcCqpu7nYumBCuPW5qHAuSF31X/mLhAOc1mkW/fed9YRNvb1vft1bllb4yCVBDOfJ7ohwYaZ4yrJLgPnZZYx3DZcBOQMWnjv7jMiNf9lMI/AUlhlOFngVe/bobLjZ8XUd3FW74x5cp1w/B6qMit2Ws+64nfu2f3Muek2kIHOMR5gpr1+HqBBb7diJMP9avP3IXpp1hvef6pW0c/W4qwdSYvKnP0IRgDzx9+X0KqSvQydmTS+sXzPHU9AWWpmV+VKbMe6GpR1JLdEtpwRiRBvD6ibX/TABBZzLEuNZGr8lcRt09AQ+/fL+C5LIAG1P72nTduFGCW3zSPpZ/gxThq+l2b/nvGxrQXWieel+iwhI+kE748cwvpYJZ84t8QIkLYE1E=
