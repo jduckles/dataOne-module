@@ -1,7 +1,7 @@
 language: c
 sudo: required
 before_script:
-- chmod +x ./bin/cibuild
+- chmod +x ./bin/build
 before_install:
 - mkdir -p ~/.ssh
 - sudo apt-get update
