@@ -9,6 +9,8 @@ git config --global user.name "Travis CI"
 
 make html
 
+cp -r reveal.js/ site/
+cp -r images/ site/
 cd site
 git init
 git add .
