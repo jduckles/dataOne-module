@@ -14,5 +14,7 @@ git init
 git add .
 cp -r ../reveal.js/ .
 cp -r ../images .
+git add images
+git add reveal.js
 git commit -m 'Deploy to gh-pages'
 git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:gh-pages
