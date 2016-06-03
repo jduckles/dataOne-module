@@ -12,7 +12,6 @@ make html
 cd site
 git init
 git add .
-cp -r ../reveal.js/ .
 cp -r ../images .
 git add images
 git add reveal.js
