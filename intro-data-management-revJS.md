@@ -8,6 +8,8 @@ Here are some *notes*.
 
 - Something about the slide
 - another thing about the slide
+- making a change
+
 
 </div>
 
